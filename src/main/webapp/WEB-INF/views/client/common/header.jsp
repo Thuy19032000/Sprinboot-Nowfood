@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="images/favicon.png">
+<link rel="shortcut icon" href="images/logo.png">
 <title>NowFood</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
@@ -27,12 +27,12 @@
 		color:red;
 	}
 </style>
-	<div class="header">
+	<div class="header show">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-2 col-sm-2">
 					<div class="logo">
-						<a href="<c:url value="/client/home"/>"><img
+						<a href="<c:url value="/client/home"/>"><img style="width:70px;height:70px;"
 							src="../resource/client/images/logo.png" alt="NowFood"></a>
 					</div>
 				</div>
@@ -41,13 +41,13 @@
 						<div class="row">
 							<div class="col-md-3">
 								<ul class="option_nav">
-									<li class="dorpdown"><a href="#">Eng</a></li>
-									<li class="dorpdown"><a href="#">USD</a></li>
+									<li class="dorpdown"><a href="#">ENG</a></li>
+									<li class="dorpdown"><a href="#">VN</a></li>
 								</ul>
 							</div>
 							<div class="col-md-6">
 								<ul class="topmenu">
-									<li><a href="#">tin tuc</a></li>
+									<li><a href="#">News</a></li>
 									<li><a href="#">Service</a></li>
 									<li><a href="#">Recruiment</a></li>
 									<li><a href="#">Media</a></li>

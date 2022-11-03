@@ -57,13 +57,15 @@ ResourceBundle resourceBundle = ResourceBundle.getBundle("messages");
         }
     }
 
-   /* @GetMapping(value = "/logout")
+/*
+    @GetMapping(value = "/logout")
     public String logout(HttpServletRequest request, HttpServletResponse response) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();// tương đương isAuthenticated
         if (auth != null) {
             new SecurityContextLogoutHandler().logout(request, response, auth);// thằng logout này  nó tự remove value thông tin cho mình rồi
         }
         return "redirect:/login";
-    }*/
+    }
+*/
 
 }

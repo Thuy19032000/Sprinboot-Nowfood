@@ -34,7 +34,7 @@ public class ForgotController {
         Optional<UserDTO> userDTO = Optional.ofNullable(userService.findByEmail(email));
         if (userDTO.isPresent()) {
             SimpleMailMessage mail = new SimpleMailMessage();
-            mail.setFrom("myanhm55@gmail.com");
+            mail.setFrom("luongdoanthuy1930@gmail.com");
             mail.setTo(email);
             mail.setSubject("reset password");
             mail.setText("Hello, " + email.split("@")[0] + " your code is : " + code);

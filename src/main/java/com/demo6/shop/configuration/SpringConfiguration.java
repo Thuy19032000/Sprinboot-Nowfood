@@ -102,8 +102,10 @@ public class SpringConfiguration {
         mailSenderImpl.setHost("smtp.gmail.com");
         mailSenderImpl.setPort(587);
         mailSenderImpl.setProtocol("smtp");
-        mailSenderImpl.setUsername("myanhm55@gmail.com");
-        mailSenderImpl.setPassword("eorrqxfjoogsydsh\n");
+//        mailSenderImpl.setUsername("myanhm55@gmail.com");
+//        mailSenderImpl.setPassword("eorrqxfjoogsydsh\n");
+        mailSenderImpl.setUsername("luongdoanthuy1930@gmail.com");
+        mailSenderImpl.setPassword("belbdnewrlitdusf");
 
         Properties javaMailProperties = new Properties();
         javaMailProperties.put("mail.smtp.starttls.enable", "true");

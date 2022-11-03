@@ -13,7 +13,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.io.IOException;
 
 @Service
-public class AWSS3Service implements FileService{
+public class  AWSS3Service implements FileService{
 	@Autowired
 	private AmazonS3Client awsS3Client;
 	

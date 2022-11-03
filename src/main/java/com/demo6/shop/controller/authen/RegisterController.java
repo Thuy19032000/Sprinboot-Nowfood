@@ -50,8 +50,8 @@ public class RegisterController {
 				} else {
 					userDTO.setPassword(new BCryptPasswordEncoder().encode(password));
 					userService.update(userDTO);
-					sendEmail("myanhm55@gmail.com", email, "Welcome to PiHalo!",
-							"Hello, " + email.split("@")[0] + "! Please confirm that you can login in PiFood!" + " Your confirmation code is: " + code);
+					sendEmail("luongdoanthuy1930@gmail.com", email, "Welcome to Now!",
+							"Hello, " + email.split("@")[0] + "! Please confirm that you can login in Now!" + " Your confirmation code is: " + code);
 				}
 			}
 		} else {
@@ -68,8 +68,8 @@ public class RegisterController {
 				roleDTO.setRoleId(5);
 				userDTO.setRoleDTO(roleDTO);
 				userService.insert(userDTO);
-				sendEmail("myanhm55@gmail.com", email, "Welcome to PiHalo!",
-						"Hello, " + email.split("@")[0] + "! Please confirm that you can login in PiFood!" + " Your confirmation code is: " + code);
+				sendEmail("luongdoanthuy1930@gmail.com", email, "Welcome to Now!",
+						"Hello, " + email.split("@")[0] + "! Please confirm that you can login in Now!" + " Your confirmation code is: " + code);
 			}
 		}
 		HttpSession session = request.getSession();
@@ -82,8 +82,8 @@ public class RegisterController {
 	public String resendCode(HttpSession session, HttpServletRequest request) {
 		String code = randomString(8);
 		String email = (String) session.getAttribute("emailRegister");
-		sendEmail("myanhm55@gmail.com", email, "Welcome to PiHalo!",
-				"Hello, " + email.split("@")[0] + "! Please confirm that you can login in PiFood!" + " Your confirmation code is: " + code);
+		sendEmail("luongdoanthuy1930@gmail.com", email, "Welcome to Now!",
+				"Hello, " + email.split("@")[0] + "! Please confirm that you can login in Now!" + " Your confirmation code is: " + code);
 		request.setAttribute("resend", "resend");
 		session.setAttribute("codeVerify", code);
 		return "authen/verify";

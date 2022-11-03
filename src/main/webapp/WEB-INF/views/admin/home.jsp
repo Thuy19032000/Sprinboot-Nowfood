@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PiFood</title>
+    <title>NowFood</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -30,9 +30,9 @@
 
     <!-- ICONS -->
     <link rel="apple-touch-icon" sizes="76x76"
-          href="<c:url value='../resource/admin/assets/img/apple-icon.png'/>">
+          href="<c:url value='../resource/admin/assets/img/logo.png'/>">
     <link rel="icon" type="image/png" sizes="96x96"
-          href="<c:url value='../resource/admin/assets/img/favicon.png'/>">
+          href="<c:url value='../resource/admin/assets/img/logo.png'/>">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">

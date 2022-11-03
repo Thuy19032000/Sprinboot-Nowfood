@@ -60,8 +60,8 @@
     <div class="container_fullwidth">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
-                    <div class="category leftbar">
+                <div class="col-md-3" style="border: 1px solid #b1154a; background-color: rgba(201, 76, 76, 0.3);">
+                    <div class="category leftbar" >
                         <h3 class="title"  style="font-size:30px"><strong>CATEGORIES</strong></h3>
                         <ul style="list-style-type:square; margin-left:10px">
                             <c:forEach items="${categories}" var="category">
@@ -74,38 +74,72 @@
 
                     <div class="price-filter leftbar">
                         <h3 class="title">Price</h3>
+
                         <form class="pricing" action="search" method="get">
-                            <select style="color:#ff1e2c;" name="pricing" onchange='this.form.submit()'>
+                         <div class="sort-by">
+                                Find: <select style="color:#ff1e2c;" name="pricing" onchange='this.form.submit()'>
                                 <option
                                         <c:if test="${pricing eq 'default'}">
                                             selected="selected"
                                         </c:if>
-                                        value="default">Find by price
+                                        value="default">Default
                                 </option>
                                 <option
                                         <c:if test="${pricing eq 'under15'}">
                                             selected="selected"
                                         </c:if>
-                                        value="under15">under 15 dollars
+                                        value="under15">Under 15 <i>$$</i>
                                 </option>
                                 <option
                                         <c:if test="${pricing eq '15to50'}">
                                             selected="selected"
                                         </c:if>
-                                        value="15to50">15 dollars to 50 dollars
+                                        value="15to50">15 $$ to 50 $$
                                 </option>
                                 <option
                                         <c:if test="${pricing eq 'greaterthan50'}">
                                             selected="selected"
                                         </c:if>
-                                        value="greaterthan50">greater than 50 dollars
+                                        value="greaterthan50">Greater than 50 $$
                                 </option>
                                 <input type="hidden" name="categoryId" value="${categoryId}"/>
                                 <input type="hidden" name="text" value="${text}"/>
                                 <input type="hidden" value="${pageSize}" name="pageSize"/>
                                 <input type="hidden" value="${sort}" name="sort"/>
                             </select>
+                            </div>
                         </form>
+                        <form class="pricing" action="<c:url value="/client/search"/>" method="get">
+                                    <div class="sort-by">
+                                        Sort : <select name="sort" onchange="this.form.submit()">
+                                        <option
+                                                <c:if test="${sort eq 'default'}">
+                                                    selected="selected"
+                                                </c:if>
+                                                value="default">Default
+                                        </option>
+                                        <option
+                                                <c:if test="${sort eq 'ASC'}">
+                                                    selected="selected"
+                                                </c:if>
+                                                value="ASC">Ascending
+                                        </option>
+                                        <option
+                                                <c:if test="${sort eq 'DESC'}">
+                                                    selected="selected"
+                                                </c:if>
+                                                value="DESC"><pre>Descending</pre>
+                                        </option>
+
+                                    </select >
+                                        <input type="hidden" value="${categoryId}" name="categoryId"/>
+                                        <input type="hidden" value="${pricing}" name="pricing"/>
+                                        <input type="hidden" value="${text}" name="text"/>
+                                        <input type="hidden" name="pageIndex" value="${pageIndex}"/>
+                                        <input type="hidden" value="${pageSize}" name="pageSize"/>
+
+                                    </div>
+                                </form>
                     </div>
 
                     <div class="clearfix"></div>
