@@ -102,8 +102,6 @@ public class SpringConfiguration {
         mailSenderImpl.setHost("smtp.gmail.com");
         mailSenderImpl.setPort(587);
         mailSenderImpl.setProtocol("smtp");
-//        mailSenderImpl.setUsername("myanhm55@gmail.com");
-//        mailSenderImpl.setPassword("eorrqxfjoogsydsh\n");
         mailSenderImpl.setUsername("luongdoanthuy1930@gmail.com");
         mailSenderImpl.setPassword("belbdnewrlitdusf");
 
@@ -126,22 +124,5 @@ public class SpringConfiguration {
         multipartResolver.setMaxUploadSize(3052880);
         return multipartResolver;
     }
-
-
-
-  /*  @Bean
-    public ByteArrayHttpMessageConverter byteArrayHttpMessageConverter() {
-        ByteArrayHttpMessageConverter arrayHttpMessageConverter = new ByteArrayHttpMessageConverter();
-        arrayHttpMessageConverter.setSupportedMediaTypes(getSupportedMediaTypes());
-        return arrayHttpMessageConverter;
-    }
-
-    private List<MediaType> getSupportedMediaTypes() {
-        List<MediaType> list = new ArrayList<MediaType>();
-        list.add(MediaType.IMAGE_JPEG);
-        list.add(MediaType.IMAGE_PNG);
-        list.add(MediaType.APPLICATION_OCTET_STREAM);
-        return list;
-    }*/
 
 }
